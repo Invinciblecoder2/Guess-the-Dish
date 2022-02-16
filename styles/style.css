@@ -1,0 +1,44 @@
+html{
+font-size: 10px;
+font-family: 'Gideon Roman', cursive;
+background-color: #00539F;
+}
+body{
+ width: 600px;
+margin: auto;
+padding: 20px 20px 20px 20px;
+border: 5px solid black;
+}
+h1{
+margin: 0;
+padding: 20px 0;
+color: #00539F;;
+text-shadow: 3px 3px 1px black;
+font-size: 60px;
+text-align: center;
+background-color: #FF9500;
+}
+h2{
+margin: 0;
+color: #00539F;;
+font-size: 40px;
+text-align: center;
+background-color: #FF9500;
+}
+h3{
+margin: 0;
+color: #00539F;;
+font-size: 30px;
+text-align: center;
+background-color: #FF9500;
+}
+img{
+display: block;
+margin: 0 auto;
+}
+p,li{
+font-size: 16px;
+line-height: 2;
+letter-spacing: lpx;
+background-color: #FBFCFD;
+}
