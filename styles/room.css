@@ -1,0 +1,55 @@
+html{
+font-size: 10px;
+font-family: 'Gideon Roman', cursive;
+background-color: #00539F;
+}
+.ho{
+width: 600px;
+height: 100px;
+margin: auto;
+border: 5px solid black;
+background-color: #FF9500;
+padding: 20px 20px 20px 20px;
+text-align: center;
+font-size: 30px;
+
+}
+h1{
+margin: 0px;
+}
+.participants{
+height: 600px;
+background-color: #FFFFFF;
+width:200px;
+border: 5px solid black;
+grid-column-start: 1;
+grid-column-end: 1;
+grid-row-start: 1;
+grid-row-end: 3;
+
+}
+.music{
+height: 600px;
+background-color: #FFFFFF;
+width:700px;
+border: 5px solid black;
+grid-column-start: 2;
+grid-column-end: 2;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+.answers{
+height: 600px;
+background-color: #FFFFFF;
+width:200px;
+border: 5px solid black;
+grid-column-start: 3;
+grid-column-end: 3;
+grid-row-start: 1;
+grid-row-end: 3;
+}
+#grid-container {
+display: grid;
+column-gap: 0px;
+grid-template-columns: auto auto auto;
+}
