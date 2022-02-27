@@ -42,8 +42,7 @@ font-size: 20px;
 line-height: 2;
 letter-spacing: lpx;
 }
-input[type=submit] {
-
+button{
 width: 200px;
 height: 60px;
 padding:5px 15px; 
