@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<link rel="preconnect" href="https://fonts.googleapis.com"> 
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+<link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
+<link href="styles/room.css" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta charset="utf-8">
+    <title></title>
+<div class="ho">
+<h1>FLOW</h1>
+<img src="" alt="FLOW LOGO" class="center">
+</div>
+  </head>
+  <body>
+    <form id="yo">
+      <input id="names" autocomplete="off" title="names"/>
+      <button  id="start" onclick="do_change()">Start</button>
+    </form>
+<div id="grid-container">
+	<ul id="participants"></ul>
+	<ul id="music"></ul>
+	<ul id="answers"></ul>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="room.js"></script>
+ </body>
+</html>
