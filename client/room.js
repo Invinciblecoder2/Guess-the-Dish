@@ -1,9 +1,9 @@
 var par = JSON.parse(localStorage.getItem("part"));
 const writeEvent = (p) =>{
+    const parent = document.querySelector('#participants');
     parent.innerHTML="";
     console.log(p);
     for(var j=0;j<p.length;j++){
-        const parent = document.querySelector('#participants');
         const el = document.createElement('li');
         el.innerHTML = p[j];
         console.log(p[j]);
