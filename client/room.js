@@ -1,18 +1,21 @@
-const writeEvent = (text) =>{
-    const parent = document.querySelector('#participants');
-    const el = document.createElement('li');
-    el.innerHTML = text;
-    console.log(parent.childNodes);
-    parent.appendChild(el);
+var par = JSON.parse(localStorage.getItem("part"));
+const writeEvent = (p) =>{
+    parent.innerHTML="";
+    console.log(p);
+    for(var j=0;j<p.length;j++){
+        const parent = document.querySelector('#participants');
+        const el = document.createElement('li');
+        el.innerHTML = p[j];
+        console.log(p[j]);
+        parent.appendChild(el);
+    }
 };
 
-var par = JSON.parse(localStorage.getItem("part"));
 console.log(par);
 const onFormSubmitted = (e) =>{
     e.preventDefault();
-        for(var j=0;j<par.length;j++){
-            sock.emit('message', par[j]);
-        }
+    sock.emit('message', par);
+    
 };
 
 
