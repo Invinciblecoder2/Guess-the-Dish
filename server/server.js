@@ -15,8 +15,6 @@ const io = socketio(server);
 
 io.on('connection', (sock) => {
     console.log('Someone Connected');
-    sock.emit('message','Hi, you are connected');
-    
     sock.on('message', (text) =>{
         io.emit('message', text);
     });
