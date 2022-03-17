@@ -25,31 +25,132 @@ border: 5px solid black;
 grid-column-start: 1;
 grid-column-end: 1;
 grid-row-start: 1;
-grid-row-end: 3;
+grid-row-end: 1;
 
 }
 #music{
 height: 600px;
 background-color: #FFFFFF;
-width:700px;
+width:380px;
 border: 5px solid black;
 grid-column-start: 2;
 grid-column-end: 2;
 grid-row-start: 1;
-grid-row-end: 3;
+grid-row-end: 1;
 }
 #answers{
 height: 600px;
 background-color: #FFFFFF;
-width:200px;
+width:300px;
 border: 5px solid black;
 grid-column-start: 3;
 grid-column-end: 3;
 grid-row-start: 1;
-grid-row-end: 3;
+grid-row-end: 1;
 }
 #grid-container {
 display: grid;
 column-gap: 0px;
 grid-template-columns: auto auto auto;
 }
+#tokenSection{
+    display: none;
+}
+
+#deviceSection{
+    display: none;
+}
+
+.container{
+    padding: 20px; 
+}
+
+#albumImage{
+    width: 300px;
+    float: left;
+    margin: 20px;
+}
+input {
+    outline: none;
+    font-size: 1.0rem;
+    padding: 0 5px;
+  }
+  
+  button {
+    text-transform: uppercase;
+    font-size: 0.8rem;
+    padding: 3px 15px;
+    color: white;
+    line-height: 25px;
+    background-color: #00bcd4;
+    border: none;
+    border-radius: 2px;
+    cursor: pointer;
+    box-shadow: rgba(0, 0, 0, 0.12) 0 1px 6px, rgba(0, 0, 0, 0.12) 0 1px 4px;
+    transition: all 150ms ease-in;
+    outline: none;
+  }
+  
+  button:hover {
+      background-color: #79d7e4;
+  }
+  
+  button.turn {
+    color: rgb(255, 64, 129);
+    background-color: white;
+    box-shadow:none;
+  }
+  
+  button.turn:hover {
+    background-color: #eaeaea;
+  }
+  
+  .rps-wrapper {
+    background-color: rgb(255, 255, 255);
+    width: 280px;
+    height: 550px;
+    max-height: 550px;
+    margin: 20px auto;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid lightgrey;
+  }
+  
+  #events {
+    flex-grow: 1;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    border-bottom: 1px solid lightgrey;
+    overflow-y: scroll;
+  }
+  
+  #events li {
+    padding: 10px 10px 10px 10px;
+  }
+  
+  .chat-wrapper {
+    padding: 10px;
+  }
+  
+  .chat-wrapper form {
+    display: flex;
+  }
+  
+  .chat-wrapper form input {
+    font-size: 1.0rem;
+    margin: 0 10px 0 0;
+    padding: 0 5px;
+    flex-grow: 1;
+  }
+  
+  .chat-wrapper form button {
+    width: 50px;
+  }
+  
+  .button-wrapper {
+    display: flex;
+    padding: 10px 30px;
+    justify-content: space-evenly;
+  }
+  

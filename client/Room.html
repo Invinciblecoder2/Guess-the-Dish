@@ -1,27 +1,93 @@
 <!DOCTYPE html>
 <html>
   <head>
-<link rel="preconnect" href="https://fonts.googleapis.com"> 
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
-<link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
-<link href="styles/room.css" rel="stylesheet">
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <meta charset="utf-8">
-    <title></title>
-<div class="ho">
-<h1>FLOW</h1>
-<img src="" alt="FLOW LOGO" class="center">
-</div>
+    <link rel="preconnect" href="https://fonts.googleapis.com"> 
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+    <link href="https://fonts.googleapis.com/css2?family=Gideon+Roman&display=swap" rel="stylesheet">
+    <link href="styles/room.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FLOW</title>
+    <div class="ho">
+      <h1>FLOW</h1>
+      <img src="" alt="FLOW LOGO" class="center">
+    </div>
   </head>
-  <body>
+<body onload="onPageLoad()">
     <form id="yo">
-      <button  id="start" onclick="do_change()">Start</button>
+      <button  id="start" onclick="do_change1()">Start</button>
+      <button  id="next" onclick="do_change2()" hidden>Next</button>
     </form>
-<div id="grid-container">
-	<ol id="participants"></ol>
-	<ul id="music"></ul>
-	<ul id="answers"></ul>
-</div>
+  <div id="grid-container">
+      <ol id="participants"></ol>
+      <div id="music">
+        <div class="token" hidden>
+          <button type="button" value="start2" onclick="requestAuthorization()">Start</button>
+      </div>
+          <div id="countdown"></div>
+          <div class="container">
+            <div id="deviceSection" class="row">
+                <div class="col">
+    
+                    <div class="mb-3" hidden>
+                        <label for="devices" class="form-label">Devices</label>
+                        <select id="devices" class="form-control">
+                        </select>
+                    </div>
+    
+                    <div class="mb-3" hidden>
+                        <label for="tracks" class="form-label" >Tracks</label>
+                        <select id="tracks" class="form-control">
+                        </select>
+                        <input class="btn btn-primary btn-sm mt-3" type="button" onclick="fetchTracks()" value="Lets Start">
+                    </div>
+    
+                    <div class="mb-3" hidden>
+                        <label for="tracks" class="form-label">Album</label>
+                        <input id="album" class="form-control">
+                    </div>
+    
+                    <div class="row">
+                        <div class="col" hidden>
+                            <input type="button" class="btn btn-dark" onclick="previous()" value="Prev">
+                            <input type="button" class="btn btn-dark" onclick="play()" value="Play">
+                            <input type="button" class="btn btn-dark" onclick="shuffle()" value="Shuffle">
+                            <input type="button" class="btn btn-dark" onclick="pause()" value="Pause">
+                            <input type="button" class="btn btn-dark" onclick="next()" value="Next">
+                        </div>
+                    </div>
+    
+    
+                    <div class="row  mt-3">
+                        <div class="col">
+                            <input type="button" class="btn btn-primary btn-sm mt-3" onclick="currentlyPlaying()" hidden value="Refresh Currently Playing">
+                            <div>
+                                <img id="albumImage" src="">
+                                <div id="trackTitle" hidden></div>
+                                <div id="trackArtist" hidden></div>
+                            </div>
+    
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+      </div>
+      <dev id="answers">
+        <div class="rps-wrapper">
+          <ul id="events"></ul>
+          <div class="controls">
+            <div class="chat-wrapper">
+              <form id="chat-form">
+                <input id="chat" autocomplete="off" title="chat"/>
+                <button id="say">Post</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </dev>
+  </div>
 <script src="/socket.io/socket.io.js"></script>
 <script src="room.js"></script>
  </body>
