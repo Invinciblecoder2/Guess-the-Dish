@@ -1,6 +1,7 @@
 const http = require("http");
 const express = require('express');
 const socketio = require('socket.io');
+var request = require("request");
 
 const app = express();
 
@@ -14,17 +15,19 @@ const server = http.createServer(app);
 const io = socketio(server);
 
 io.on('connection', (sock) => {
-    console.log('Someone Connected');
-    sock.on('message', (text) =>{
-        io.emit('message', text);
-    });
+  sock.on('chat', (text) =>{
+    io.emit('chat', text);
+  });
+  sock.on('message', (text) =>{
+    io.emit('message', text);
+  });
+    
     
 });
 
 server.on('error',(err) =>{
     console.error('Server error:',err);
 });
-
 
 
 server.listen(8080,() => {

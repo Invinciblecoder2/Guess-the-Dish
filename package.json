@@ -1,0 +1,11 @@
+{
+  "dependencies": {
+    "spotify-web-sdk": "^0.7.1"
+  },
+  "scripts": {
+    "start": "react-scripts start",
+    "build": "react-scripts build",
+    "server": "node server",
+    "dev": "run-p server start"
+  }
+}
